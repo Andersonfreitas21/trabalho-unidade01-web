@@ -19,15 +19,19 @@ btn_red.addEventListener("click", function () {
   color.textContent = colors[2];
 });
 
-var btnSalvar = document.querySelector('.salvar');
+var btnEnviar = document.querySelector('.enviar');
 
-btnSalvar.addEventListener('click', event => {
+btnEnviar.addEventListener('click', event => {
     event.preventDefault();
-    var inputName = document.querySelector('#nome').value;
-    if (inputName) {
-        var txt = document.createTextNode(inputName);
+    var inputNome = document.querySelector('#nome').value;
+    var inputMensagem = document.querySelector('#mensagem').value;
+    if (inputNome || inputMensagem) {
+        var txtNome = document.createTextNode(inputNome);
+        var txtMensagem = document.createTextNode(inputMensagem);
+        
         var p = document.createElement('p');
-        p.appendChild(txt);
+        p.appendChild(txtNome);
+        p.appendChild(txtMensagem);
 
         var btnExcluir = document.createElement('button')
         btnExcluir.appendChild(document.createTextNode('Excluir'));

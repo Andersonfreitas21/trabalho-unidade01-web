@@ -44,14 +44,18 @@
   color: white;
 }
 
-.form-nome{
-  display: flex;
+.form-recado{
+  display: block;
   justify-content: center;
   align-items: center;
   margin: 50px auto
 }
 
-#nome{
+#nome {
+  padding: 5px;
+}
+
+#mensagem{
   padding: 5px;
 }
 
@@ -67,9 +71,9 @@
   margin: 50px auto
 }
 
-.salvar{
+.enviar{
   color: white;
-  background: black;
+  background:blue;
   border: 0 solid black;
   border-radius: 3px;
   margin-left: 20px;
@@ -77,12 +81,12 @@
 }
 
 .botao-excluir{
-  margin-left: 20px;
   color: white;
-  background: black;
+  background:blue;
   border: 0 solid black;
   border-radius: 3px;
-  padding: 5px 20px
+  margin-left: 20px;
+  padding: 5px 20px;
 }
 
 .ul li {

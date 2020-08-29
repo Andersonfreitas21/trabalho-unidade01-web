@@ -9,9 +9,37 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <button class="button button1" id="btn-green">Green</button>
+  <header id="home">
+    <!-- navbar -->
+    <nav id="nav">
+      <div class="nav-center">
+        <!-- nav header -->
+        <div class="nav-header">
+          <img src="./logo.svg" class="logo" alt="logo" />
+          <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <!-- links -->
+        <div class="links-container">
+          <ul class="links">
+            <li>
+              <button class="button button1" id="btn-green">Green</button>
+            </li>
+            <li>
+              <button class="button button2" id="btn-blue">Blue</button>
+            </li>
+            <li>
+              <button class="button button3" id="btn-red">Red</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </header>
+  <!-- <button class="button button1" id="btn-green">Green</button>
   <button class="button button2" id="btn-blue">Blue</button>
-  <button class="button button3" id="btn-red">Red</button>
+  <button class="button button3" id="btn-red">Red</button> -->
     <div>
       <form class="form-recado">
         <h2>Deixe seu Recado</h2>
@@ -23,6 +51,14 @@
           <ul class="ul"></ul>
       </div>
   </div>
+
+      <!-- footer -->
+      <footer class="section">
+        <p>
+          copyright &copy; Universidade Federal do Ceará - UFC 
+          <span id="date"></span>. all rights reserved
+        </p>
+      </footer>
 
    <!-- javascript -->
   <script src="app.js"></script>

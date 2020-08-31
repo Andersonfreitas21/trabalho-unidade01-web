@@ -59,7 +59,7 @@ scrollLinks.forEach((link) => {
 
 // ********** Colors buttons ************
 // select backgrounds
-const colors = ["green","blue","red"];
+const colors = ["green", "blue", "red"];
 const btn_green = document.getElementById("btn-green");
 const btn_blue = document.getElementById("btn-blue");
 const btn_red = document.getElementById("btn-red");
@@ -85,43 +85,45 @@ btn_red.addEventListener("click", function () {
 
 // ********** Message ************
 // list message
-var btnEnviar = document.querySelector('.enviar');
+var btnEnviar = document.querySelector(".enviar");
 
-btnEnviar.addEventListener('click', event => {
-    event.preventDefault();
-    var inputNome = document.querySelector('#nome').value;
-    var inputMensagem = document.querySelector('#mensagem').value;
-    if (inputNome || inputMensagem) {
-        var txtNome = document.createTextNode(inputNome);
-        var txtMensagem = document.createTextNode(inputMensagem);
-        
-        var p = document.createElement('p');
-        p.appendChild(txtNome);
-        p.appendChild(txtMensagem);
+btnEnviar.addEventListener("click", (event) => {
+  event.preventDefault();
+  var inputNome = document.querySelector("#nome").value;
+  var inputMensagem = document.querySelector("#mensagem").value;
+  if (inputNome || inputMensagem) {
+    var txtNome = document.createTextNode(inputNome);
+    var separator = document.createTextNode(": ");
+    var txtMensagem = document.createTextNode(inputMensagem);
 
-        var btnExcluir = document.createElement('button')
-        btnExcluir.appendChild(document.createTextNode('Excluir'));
-        btnExcluir.classList.add('botao-excluir');
-        btnExcluir.addEventListener('click', event => {
-            event.preventDefault();
-            event.target.parentNode.parentNode.remove();
-        })
+    var p = document.createElement("p");
+    p.appendChild(txtNome);
+    p.appendChild(separator);
+    p.appendChild(txtMensagem);
 
-        var div = document.createElement('div');
-        div.appendChild(p);
-        div.appendChild(btnExcluir);
-        div.classList.add('div-interno');
+    var btnExcluir = document.createElement("button");
+    btnExcluir.appendChild(document.createTextNode("Excluir"));
+    btnExcluir.classList.add("botao-excluir");
+    btnExcluir.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.target.parentNode.parentNode.remove();
+    });
 
-        var li = document.createElement('li');
-        li.appendChild(div);
+    var div = document.createElement("div");
+    div.appendChild(p);
+    div.appendChild(btnExcluir);
+    div.classList.add("div-interno");
 
-        var ul = document.querySelector('.ul');
-        ul.style.listStyle = 'none';
-        ul.appendChild(li);
+    var li = document.createElement("li");
+    li.appendChild(div);
 
-        var lista = document.querySelector('.lista');
-        lista.appendChild(ul);
-    }
+    var ul = document.querySelector(".ul");
+    ul.style.listStyle = "none";
+    ul.appendChild(li);
+
+    var lista = document.querySelector(".lista");
+    lista.appendChild(ul);
+  }
 });
 
 function myFunction() {
